@@ -9,25 +9,30 @@ import React from "react";
 import Component from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-function App() {
-  return (
-    <Router>
-      <div className="container">
-        <div className="header">
-          <Header />
+class App extends React.Component {
+  constructor() {
+    super();
+  }
+  render() {
+    return (
+      <Router>
+        <div className="container">
+          <div className="header">
+            <Header />
+          </div>
+          <div className="base">
+            <Base />
+          </div>
+          <div className="sidebar">
+            <Sidebar />
+          </div>
+          <div className="footer">
+            <Footer />
+          </div>
         </div>
-        <div className="base">
-          <Base />
-        </div>
-        <div className="sidebar">
-          <Sidebar />
-        </div>
-        <div className="footer">
-          <Footer />
-        </div>
-      </div>
-    </Router>
-  );
+      </Router>
+    );
+  }
 }
 
 export default App;
