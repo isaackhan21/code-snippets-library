@@ -5,17 +5,26 @@ import AddSnippet from "./components/AddSnippet";
 import Snippets from "./components/Snippets";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
+import React from "react";
+import Component from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Header />
-        <Base />
-
-        <Sidebar />
-        <Footer />
+      <div className="container">
+        <div className="header">
+          <Header />
+        </div>
+        <div className="base">
+          <Base />
+        </div>
+        <div className="sidebar">
+          <Sidebar />
+        </div>
+        <div className="footer">
+          <Footer />
+        </div>
       </div>
     </Router>
   );
