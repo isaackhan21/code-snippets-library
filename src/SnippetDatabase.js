@@ -18,3 +18,9 @@ export const snippetDatabase = [
     snippet: "Snippet3",
   },
 ];
+
+export const categoriesDatabase = [
+  { title: "First Category", id: 0 },
+  { title: "Second Category", id: 1 },
+  { title: "Third Category", id: 2 },
+];

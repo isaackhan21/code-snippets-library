@@ -1,8 +1,12 @@
-const Snippets = () => {
+import SnippetPreview from "./SnippetPreview";
+
+const Snippets = ({ snippets }) => {
   return (
-    <div>
-      <h1>Snippets</h1>
-    </div>
+    <>
+      {snippets.map((snippet) => (
+        <SnippetPreview key={snippet.id} snippet={snippet} />
+      ))}
+    </>
   );
 };
 
