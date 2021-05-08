@@ -1,10 +1,10 @@
 import Snippets from "./Snippets";
 import Categories from "./Categories";
 
-const Sidebar = ({}) => {
+const Sidebar = ({ snippets }) => {
   return (
     <div>
-      <Categories />
+      <Snippets snippets={snippets} />
     </div>
   );
 };

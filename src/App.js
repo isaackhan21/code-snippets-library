@@ -8,18 +8,44 @@ import Footer from "./components/Footer";
 import React from "react";
 import Component from "react";
 import { snippetDatabase } from "./SnippetDatabase";
-import { categoriesDatabase } from "./SnippetDatabase";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  withRouter,
+} from "react-router-dom";
 
 class App extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      categories: categoriesDatabase,
       snippets: snippetDatabase,
+      newSnippet: "",
     };
   }
+
+  // addSnippet = (snippet, cat) => {
+  //   const id = Math.floor(Math.random() * 10000) + 1;
+  //   const newSnippet = {
+  //     id,
+  //     ...snippet,
+  //   };
+  //   const snippets = [...this.state.snippets];
+  //   snippets.push(newSnippet);
+  //   this.setState({
+  //     snippets,
+  //     newSnippet: "",
+  //   });
+  // };
+
+  // deleteSnippet = (id) => {
+  //   const list = [...this.state.snippets];
+  //   const updatedList = list.filter((i) => i.id !== id);
+  //   this.setState({
+  //     snippets: updatedList,
+  //   });
+  // };
 
   render() {
     return (
@@ -29,10 +55,14 @@ class App extends React.Component {
             <Header />
           </div>
           <div className="base">
-            <Base snippets={this.state.snippets} />
+            <Base
+              snippets={this.state.snippets}
+              // onAdd={this.addSnippet}
+              // onDelete={this.deleteSnippet}
+            />
           </div>
           <div className="sidebar">
-            <Sidebar />
+            <Sidebar snippets={this.state.snippets} />
           </div>
           <div className="footer">
             <Footer />

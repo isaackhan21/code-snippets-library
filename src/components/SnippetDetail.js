@@ -11,9 +11,9 @@ const SnippetDetail = () => {
   const { id } = useParams();
   return (
     <div>
-      {/* <Highlight> */}
-      <h1>Snippet Detail: {id}</h1>
-      {/* </Highlight> */}
+      <Highlight>
+        <h1>Snippet Detail: {id}</h1>
+      </Highlight>
     </div>
   );
 };
