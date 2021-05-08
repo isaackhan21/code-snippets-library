@@ -39,13 +39,13 @@ class App extends React.Component {
     });
   };
 
-  // deleteSnippet = (id) => {
-  //   const list = [...this.state.snippets];
-  //   const updatedList = list.filter((i) => i.id !== id);
-  //   this.setState({
-  //     snippets: updatedList,
-  //   });
-  // };
+  deleteSnippet = (id) => {
+    const list = [...this.state.snippets];
+    const updatedList = list.filter((i) => i.id !== id);
+    this.setState({
+      snippets: updatedList,
+    });
+  };
 
   render() {
     return (
@@ -55,14 +55,13 @@ class App extends React.Component {
             <Header />
           </div>
           <div className="base">
-            <Base
-              snippets={this.state.snippets}
-              onAdd={this.addSnippet}
-              // onDelete={this.deleteSnippet}
-            />
+            <Base snippets={this.state.snippets} onAdd={this.addSnippet} />
           </div>
           <div className="sidebar">
-            <Sidebar snippets={this.state.snippets} />
+            <Sidebar
+              snippets={this.state.snippets}
+              onDelete={this.deleteSnippet}
+            />
           </div>
           <div className="footer">
             <Footer />

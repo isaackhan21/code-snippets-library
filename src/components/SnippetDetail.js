@@ -7,7 +7,7 @@ import Highlight from "react-highlight.js";
 // import "prismjs/components/prism-javascript";
 // import "prismjs/themes/prism.css"; //Example style, you can use another
 
-const SnippetDetail = () => {
+const SnippetDetail = ({}) => {
   const { id } = useParams();
   return (
     <div>
