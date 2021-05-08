@@ -25,19 +25,19 @@ class App extends React.Component {
     };
   }
 
-  // addSnippet = (snippet, cat) => {
-  //   const id = Math.floor(Math.random() * 10000) + 1;
-  //   const newSnippet = {
-  //     id,
-  //     ...snippet,
-  //   };
-  //   const snippets = [...this.state.snippets];
-  //   snippets.push(newSnippet);
-  //   this.setState({
-  //     snippets,
-  //     newSnippet: "",
-  //   });
-  // };
+  addSnippet = (snippet, cat) => {
+    const id = Math.floor(Math.random() * 10000) + 1;
+    const newSnippet = {
+      id,
+      ...snippet,
+    };
+    const snippets = [...this.state.snippets];
+    snippets.push(newSnippet);
+    this.setState({
+      snippets,
+      newSnippet: "",
+    });
+  };
 
   // deleteSnippet = (id) => {
   //   const list = [...this.state.snippets];
@@ -57,7 +57,7 @@ class App extends React.Component {
           <div className="base">
             <Base
               snippets={this.state.snippets}
-              // onAdd={this.addSnippet}
+              onAdd={this.addSnippet}
               // onDelete={this.deleteSnippet}
             />
           </div>

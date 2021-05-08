@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({}) => {
   return (
     <header className="header-content">
       <h1>Code Snippets</h1>

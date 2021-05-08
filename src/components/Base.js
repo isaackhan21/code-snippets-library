@@ -4,7 +4,7 @@ import Home from "./Home";
 import AddSnippet from "./AddSnippet";
 import SnippetDetail from "./SnippetDetail";
 
-const Base = ({ snippets }) => {
+const Base = ({ snippets, onAdd }) => {
   return (
     <div class="base">
       <Switch>
@@ -12,7 +12,7 @@ const Base = ({ snippets }) => {
           <Home />
         </Route>
         <Route path="/create">
-          <AddSnippet snippets={snippets} />
+          <AddSnippet snippets={snippets} onAdd={onAdd} />
         </Route>
         <Route exact path="/snippets">
           <Snippets snippets={snippets} />
