@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const AddSnippet = ({ snippets, onAdd }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [snippet, setSnippet] = useState("");
+  const history = useHistory();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -13,6 +16,7 @@ const AddSnippet = ({ snippets, onAdd }) => {
     setTitle("");
     setDescription("");
     setSnippet("");
+    history.push("/");
   };
   return (
     <form onSubmit={onSubmit}>

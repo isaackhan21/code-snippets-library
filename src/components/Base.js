@@ -14,10 +14,10 @@ const Base = ({ snippets, onAdd }) => {
         <Route path="/create">
           <AddSnippet snippets={snippets} onAdd={onAdd} />
         </Route>
-        <Route exact path="/snippets">
+        {/* <Route exact path="/snippets">
           <Snippets snippets={snippets} />
-        </Route>
-        <Route path="/snippets/:id">
+        </Route> */}
+        <Route exact path="/snippets/:id">
           <SnippetDetail />
         </Route>
       </Switch>
