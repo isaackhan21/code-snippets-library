@@ -51,3 +51,8 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+
+.snippets {
+  display: flex;
+  flex-direction: column-reverse;
+}

@@ -4,7 +4,7 @@ import { useState } from "react";
 const Snippets = ({ snippets, onDelete }) => {
   const [searchTerm, setSearchTerm] = useState("");
   return (
-    <div className="snippets">
+    <div className="snippets-list">
       <input
         type="text"
         placeholder="Search Snippet..."
@@ -12,23 +12,25 @@ const Snippets = ({ snippets, onDelete }) => {
           setSearchTerm(e.target.value);
         }}
       />
-      {snippets
-        .filter((snippet) => {
-          if (searchTerm == "") {
-            return snippet;
-          } else if (
-            snippet.title.toLowerCase().includes(searchTerm.toLowerCase())
-          ) {
-            return snippet;
-          }
-        })
-        .map((snippet) => (
-          <SnippetPreview
-            key={snippet.id}
-            snippet={snippet}
-            onDelete={onDelete}
-          />
-        ))}
+      <div className="snippets">
+        {snippets
+          .filter((snippet) => {
+            if (searchTerm == "") {
+              return snippet;
+            } else if (
+              snippet.title.toLowerCase().includes(searchTerm.toLowerCase())
+            ) {
+              return snippet;
+            }
+          })
+          .map((snippet) => (
+            <SnippetPreview
+              key={snippet.id}
+              snippet={snippet}
+              onDelete={onDelete}
+            />
+          ))}
+      </div>
     </div>
   );
 };
