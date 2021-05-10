@@ -1,10 +1,12 @@
 import Snippets from "./Snippets";
 import Categories from "./Categories";
 
-const Sidebar = ({ snippets, onDelete }) => {
+const Sidebar = ({ snippets, onDelete, isLoading, error }) => {
   return (
     <div>
-      <Snippets snippets={snippets} onDelete={onDelete} />
+      {isLoading && <div>Loading...</div>}
+      {error && <div>{error}</div>}
+      {snippets && <Snippets snippets={snippets} onDelete={onDelete} />}
     </div>
   );
 };

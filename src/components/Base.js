@@ -6,7 +6,7 @@ import SnippetDetail from "./SnippetDetail";
 
 const Base = ({ snippets, onAdd }) => {
   return (
-    <div class="base">
+    <div className="base">
       <Switch>
         <Route exact path="/">
           <Home />
@@ -18,7 +18,7 @@ const Base = ({ snippets, onAdd }) => {
           <Snippets snippets={snippets} />
         </Route> */}
         <Route exact path="/snippets/:id">
-          <SnippetDetail />
+          <SnippetDetail snippets={snippets} />
         </Route>
       </Switch>
     </div>

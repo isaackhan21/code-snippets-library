@@ -1,8 +1,8 @@
 const Home = () => {
   return (
-    <di className="home">
+    <div className="home">
       <h1>Home</h1>
-    </di>
+    </div>
   );
 };
 
