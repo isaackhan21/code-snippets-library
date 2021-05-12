@@ -13,11 +13,22 @@ import {
   withRouter,
 } from "react-router-dom";
 import useFetch from "./useFetch";
+import { useEffect } from "react";
+import Prism from "prismjs";
 
 function App() {
-  const { data: snippets, isLoading, error } = useFetch(
-    "http://localhost:8000/snippets"
-  );
+  const {
+    data: snippets,
+    isLoading,
+    error,
+  } = useFetch("http://localhost:8000/snippets");
+
+  function usePrismHighlightAll() {
+    useEffect(() => {
+      setTimeout(() => Prism.highlightAll(), 0);
+    }, []);
+  }
+
   // addSnippet = (snippet, cat) => {
   //   const id = Math.floor(Math.random() * 10000) + 1;
   //   const newSnippet = {
@@ -40,8 +51,6 @@ function App() {
   //   });
   // };
 
-  useEffect(() => {}, []);
-
   return (
     <Router>
       <div className="container">
@@ -51,7 +60,7 @@ function App() {
         {/* {error && <div>{error}</div>}
         {isLoading && <div>Loading...</div>} */}
         <div className="base">
-          <Base snippets={snippets} />
+          <Base snippets={snippets} prism={usePrismHighlightAll} />
         </div>
         <div className="sidebar">
           <Sidebar

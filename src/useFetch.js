@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+// import hljs from "highlight.js";
+// import "highlight.js/styles/github.css";
+// import Prism from "prismjs";
 
 const useFetch = (url) => {
   const [data, setData] = useState(null);
@@ -17,6 +20,10 @@ const useFetch = (url) => {
         setData(data);
         setIsLoading(false);
         setError(null);
+
+        // hljs.initHighlighting.called = false;
+        // hljs.initHighlighting();
+        // hljs.initHighlightingOnLoad();
       })
       .catch((err) => {
         if (err.name === "AbortError") {

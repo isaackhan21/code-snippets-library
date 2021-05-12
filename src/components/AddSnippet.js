@@ -6,16 +6,28 @@ const AddSnippet = ({ snippets, onAdd }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [snippet, setSnippet] = useState("");
+  const [isPending, setIsPending] = useState(false);
   const history = useHistory();
 
   const onSubmit = (e) => {
     e.preventDefault();
 
-    onAdd({ title, description, snippet });
+    const snippets = { title, description, snippet };
 
-    setTitle("");
-    setDescription("");
-    setSnippet("");
+    setIsPending(true);
+
+    fetch("http://localhost:8000/snippets", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(snippets),
+    }).then(() => {
+      console.log("w");
+      setIsPending(false);
+    });
+
+    // setTitle("");
+    // setDescription("");
+    // setSnippet("");
     history.push("/");
   };
   return (
@@ -48,7 +60,9 @@ const AddSnippet = ({ snippets, onAdd }) => {
         />
       </div>
 
-      <input type="submit" value="Save Snippet" />
+      <button>Add</button>
+      {/* {!isPending && <input type="submit" value="Save Snippet" />}
+      {isPending && <input disabled type="submit" value="Adding Snippet..." />} */}
     </form>
   );
 };
