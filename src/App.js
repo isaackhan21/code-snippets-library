@@ -13,10 +13,14 @@ import {
   withRouter,
 } from "react-router-dom";
 import useFetch from "./useFetch";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Prism from "prismjs";
+import { useHistory } from "react-router-dom";
 
 function App() {
+  const [snippetCopy, setSnippetCopy] = useState([]);
+  const [snipCat, setSnipCat] = useState([]);
+  const [btns, setbtns] = useState(["All", "React"]);
   const {
     data: snippets,
     isLoading,
@@ -28,6 +32,42 @@ function App() {
       setTimeout(() => Prism.highlightAll(), 0);
     }, []);
   }
+
+  // useEffect(() => {
+  //   const data = localStorage.getItem("btns");
+  //   if (data) {
+  //     setbtns(JSON.parse(data));
+  //   }
+  //   setbtns();
+  // }, []);
+
+  // useEffect(() => {
+  //   localStorage.setItem("btns", JSON.stringify(btns));
+  // }, [btns]);
+
+  // const handleBtns = (e) => {
+  //   let snippetCopy;
+  //   if (e.target.value === "All") {
+  //     setSnippetCopy(snippets);
+  //   } else {
+  //     setSnippetCopy(
+  //       snippets.filter((snippet) => snippet.category === e.target.value)
+  //     );
+  //   }
+  // };
+
+  const addCategory = (category) => {
+    if (category == null) {
+      setbtns([...btns, category]);
+      console.log(btns);
+    }
+  };
+
+  const addCategoryText = (category) => {
+    setbtns([...btns, category]);
+    console.log(btns);
+    // setSnippetCopy(snippets);
+  };
 
   // addSnippet = (snippet, cat) => {
   //   const id = Math.floor(Math.random() * 10000) + 1;
@@ -60,13 +100,27 @@ function App() {
         {/* {error && <div>{error}</div>}
         {isLoading && <div>Loading...</div>} */}
         <div className="base">
-          <Base snippets={snippets} prism={usePrismHighlightAll} />
+          <Base
+            snippets={snippetCopy}
+            btns={btns}
+            snippetsCat={snippets}
+            prism={usePrismHighlightAll}
+            btns={btns}
+            addCategory={addCategory}
+            addCategoryText={addCategoryText}
+            isLoading={isLoading}
+            error={error}
+            // handleBtns={handleBtns}
+          />
         </div>
         <div className="sidebar">
           <Sidebar
-            snippets={snippets}
+            btns={btns}
+            snippets={snippetCopy}
+            snippetsCat={snippets}
             isLoading={isLoading}
             error={error}
+            // handleBtns={handleBtns}
             // onDelete={this.deleteSnippet}
           />
         </div>

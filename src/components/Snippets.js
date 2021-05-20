@@ -1,8 +1,22 @@
 import SnippetPreview from "./SnippetPreview";
 import { useState } from "react";
+import Categories from "./Categories";
 
-const Snippets = ({ snippets, onDelete }) => {
+const Snippets = ({ snippets, onDelete, btns, handleBtnsFetch }) => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [snippetCopy, setSnippetCopy] = useState([]);
+
+  // const handleBtnsFetch = (e) => {
+  //   let snippetCopy;
+  //   if (e.target.value === "All") {
+  //     setSnippetCopy(snippets);
+  //   } else {
+  //     setSnippetCopy(
+  //       snippets.filter((snippet) => snippet.category === e.target.value)
+  //     );
+  //   }
+  // };
+
   return (
     <div className="snippets-list">
       <input
@@ -11,6 +25,11 @@ const Snippets = ({ snippets, onDelete }) => {
         onChange={(e) => {
           setSearchTerm(e.target.value);
         }}
+      />
+      <Categories
+        btns={btns}
+        handleBtnsFetch={handleBtnsFetch}
+        snippets={snippets}
       />
       <div className="snippets">
         {snippets

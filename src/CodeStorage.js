@@ -263,3 +263,20 @@ class App extends React.Component {
 }
 
 export default App;
+
+
+{btns.map((btn) => {
+  return (
+    <div>
+      <button
+        value={btn}
+        onClick={(func) => {
+          routeChange(func);
+          handleBtns(func);
+        }}
+      >
+        {btn}
+      </button>
+    </div>
+  );
+})}

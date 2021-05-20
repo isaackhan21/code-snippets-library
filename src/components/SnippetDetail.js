@@ -19,6 +19,8 @@ const SnippetDetail = ({ snippets, prism }) => {
     isLoading,
   } = useFetch("http://localhost:8000/snippets/" + id);
 
+  const handleClick = () => {};
+
   return (
     <div>
       {isLoading && <div>Loading...</div>}
@@ -37,6 +39,7 @@ const SnippetDetail = ({ snippets, prism }) => {
           </pre> */}
           {/* </Highlight> */}
           <CodeSnippet snippet={snippet} prism={prism} />
+          <button onClick={handleClick}>Delete</button>
         </div>
       )}
     </div>
