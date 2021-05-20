@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import Highlight from "react-highlight.js";
 import { useState } from "react";
 import SnippetDetailItems from "./SnippetDetailItems";
@@ -18,8 +18,15 @@ const SnippetDetail = ({ snippets, prism }) => {
     error,
     isLoading,
   } = useFetch("http://localhost:8000/snippets/" + id);
+  const history = useHistory();
 
-  const handleClick = () => {};
+  const handleClick = () => {
+    fetch("http://localhost:8000/snippets/" + snippet.id, {
+      method: "DELETE",
+    }).then(() => {
+      history.push("/");
+    });
+  };
 
   return (
     <div>
