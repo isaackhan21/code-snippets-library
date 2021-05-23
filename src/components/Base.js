@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import AddSnippet from "./AddSnippet";
 import SnippetDetail from "./SnippetDetail";
+import EditSnippet from "./EditSnippet";
 
 const Base = ({
   snippets,
@@ -29,7 +30,7 @@ const Base = ({
             error={error}
           />
         </Route>
-        <Route path="/create">
+        <Route exact path="/create">
           <AddSnippet
             snippets={snippets}
             snippetsCat={snippetsCat}
@@ -38,6 +39,9 @@ const Base = ({
             addCategory={addCategory}
             addCategoryText={addCategoryText}
           />
+        </Route>
+        <Route path="/create/edit/:id">
+          <EditSnippet />
         </Route>
         {/* <Route exact path="/snippets"> */}
         {/* {snippets && <Snippets snippets={snippets} />} */}

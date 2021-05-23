@@ -4,8 +4,12 @@ const Header = ({}) => {
   return (
     <header className="header-content">
       <h1>Code Snippets</h1>
-      <Link to="/">Home</Link>
-      <Link to="/create">Add Snippet</Link>
+      <Link className="home-link" to="/">
+        Home
+      </Link>
+      <Link className="create-link" to="/create">
+        Add Snippet
+      </Link>
     </header>
   );
 };

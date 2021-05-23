@@ -17,14 +17,17 @@ const Home = ({
     errorFetch,
   } = useFetch("http://localhost:8000/snippets");
   const [snippetCopy, setSnippetCopy] = useState([]);
+  const [showSearch, setShowSearch] = useState(false);
   const handleBtnsFetch = (e) => {
     let snippetCopy;
     if (e.target.value === "All") {
       setSnippetCopy(snippetsFetch);
+      setShowSearch(true);
     } else {
       setSnippetCopy(
         snippetsFetch.filter((snippet) => snippet.category === e.target.value)
       );
+      setShowSearch(true);
     }
   };
   return (
@@ -37,6 +40,7 @@ const Home = ({
           snippets={snippetCopy}
           btns={btns}
           handleBtnsFetch={handleBtnsFetch}
+          showSearch={showSearch}
         />
       )}
     </div>

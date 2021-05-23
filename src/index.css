@@ -58,3 +58,9 @@ body {
   display: flex;
   flex-direction: column-reverse;
 }
+
+.home-link,
+.create-link {
+  text-decoration: none;
+  color: white;
+}

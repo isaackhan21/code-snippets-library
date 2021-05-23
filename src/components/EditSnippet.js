@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Redirect } from "react-router-dom";
-import { useHistory } from "react-router-dom";
 
-const AddSnippet = ({
+import useFetch from "../useFetch";
+import { useHistory, useParams } from "react-router-dom";
+
+const EditSnippet = ({
   snippets,
   onAdd,
   btns,
@@ -14,9 +16,16 @@ const AddSnippet = ({
   const [description, setDescription] = useState("");
   const [snippet, setSnippet] = useState("");
   const [category, setCategory] = useState("");
-  const [isDropDown, setIsDropdown] = useState(true);
+  const [isDropDown, setIsDropdown] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
+
+  const { id } = useParams();
+  const {
+    data: snippetEdit,
+    errorEdit,
+    isLoadingEdit,
+  } = useFetch("http://localhost:8000/snippets/" + id);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -46,11 +55,9 @@ const AddSnippet = ({
     // setSnippet("");
   };
 
-  const buttons = btns.slice(1);
-
   return (
     <form onSubmit={onSubmit}>
-      <h1>AddSnippet</h1>
+      <h1>EditSnippet</h1>
       <div className="form">
         <input
           type="text"
@@ -61,7 +68,7 @@ const AddSnippet = ({
       </div>
       <div className="form">
         <label>Note Description</label>
-        <textarea
+        <input
           type="text"
           placeholder="Add Note Description"
           value={description}
@@ -70,7 +77,7 @@ const AddSnippet = ({
       </div>
       <div className="form">
         <label>Content</label>
-        <textarea
+        <input
           type="text"
           placeholder="Add Note"
           value={snippet}
@@ -116,4 +123,4 @@ const AddSnippet = ({
   );
 };
 
-export default AddSnippet;
+export default EditSnippet;
