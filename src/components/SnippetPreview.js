@@ -2,12 +2,14 @@ import { Link } from "react-router-dom";
 
 const SnippetPreview = ({ snippet, onDelete }) => {
   return (
-    <div>
-      <Link to={`/snippets/${snippet.id}`}>
-        <h3>{snippet.title}</h3>
-        <h4>{snippet.description}</h4>
+    <div className="">
+      <Link to={`/snippets/${snippet.id}`} style={{ textDecoration: "none" }}>
+        <div className="snippet-item">
+          <h3 className="snippet-title">{snippet.title}</h3>
+          <h4 className="snippet-description">{snippet.description}</h4>
+        </div>
       </Link>
-      <button onClick={() => onDelete(snippet.id)}>Delete</button>
+      {/* <button onClick={() => onDelete(snippet.id)}>Delete</button> */}
     </div>
   );
 };

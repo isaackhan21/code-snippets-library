@@ -1,9 +1,10 @@
 import { useHistory, useParams } from "react-router-dom";
 import Highlight from "react-highlight.js";
 import { useState } from "react";
-import SnippetDetailItems from "./SnippetDetailItems";
+// import SnippetDetailItems from "./SnippetDetailItems";
 import useFetch from "../useFetch";
 import CodeSnippet from "./CodeSnippet";
+import Button from "./Button";
 
 // import Editor from "react-simple-code-editor";
 // import { highlight, languages } from "prismjs/components/prism-core";
@@ -30,25 +31,39 @@ const SnippetDetail = ({ snippets, prism }) => {
 
   return (
     <div>
-      {isLoading && <div>Loading...</div>}
-      {error && <div>{error}</div>}
-      {snippet && (
-        <div>
-          {snippet.title}
-          {snippet.description}
-          {/* <Highlight> */}
-          {/* <pre */}
-          {/* // className="ft-syntax-highlight"
+      <div className="snippet-detail">
+        <div className="buttons">
+          <div className="go-back-btn">
+            <Button
+              className="cat-btn"
+              color="blue"
+              text="Go Back"
+              onClick={history.goBack}
+            />
+          </div>
+          <div className="delete-btn">
+            <Button color="red" text="Delete Snippet" onClick={handleClick} />
+          </div>
+        </div>
+        {isLoading && <div>Loading...</div>}
+        {error && <div>{error}</div>}
+        {snippet && (
+          <div className="">
+            {snippet.title}
+            {snippet.description}
+            {/* <Highlight> */}
+            {/* <pre */}
+            {/* // className="ft-syntax-highlight"
           // data-syntax="js"
           // data-syntax-theme="one-dark"
           > */}
-          {/* <code>{snippet.snippet}</code>
+            {/* <code>{snippet.snippet}</code>
           </pre> */}
-          {/* </Highlight> */}
-          <CodeSnippet snippet={snippet} prism={prism} />
-          <button onClick={handleClick}>Delete</button>
-        </div>
-      )}
+            {/* </Highlight> */}
+            <CodeSnippet snippet={snippet} prism={prism} />
+          </div>
+        )}
+      </div>
     </div>
   );
 };

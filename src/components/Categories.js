@@ -35,7 +35,7 @@ const Categories = ({ handleBtnsFetch, snippets, snippetsCat, btns }) => {
   // const uniqueCat = [...new Set(categories)];
 
   return (
-    <div>
+    <div className="cat-btns">
       {/* <button
         value="All"
         onClick={(func) => {
@@ -50,6 +50,7 @@ const Categories = ({ handleBtnsFetch, snippets, snippetsCat, btns }) => {
           return (
             <div key={index}>
               <button
+                className="cat-btn"
                 value={snippet}
                 key={snippet.id}
                 onClick={(func) => {

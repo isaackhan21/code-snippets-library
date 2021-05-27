@@ -59,6 +59,10 @@ function App() {
   //   }
   // };
 
+  const deleteBtn = (id) => {
+    setbtns(btns.filter((btn) => btn.id !== id));
+  };
+
   const addCategory = (category) => {
     if (category == null) {
       setbtns([...btns, category]);
@@ -119,10 +123,11 @@ function App() {
             addCategoryText={addCategoryText}
             isLoading={isLoading}
             error={error}
+
             // handleBtns={handleBtns}
           />
         </div>
-        <div className="sidebar">
+        {/* <div className="sidebar">
           <Sidebar
             btns={btns}
             snippets={snippetCopy}
@@ -132,7 +137,7 @@ function App() {
             // handleBtns={handleBtns}
             // onDelete={this.deleteSnippet}
           />
-        </div>
+        </div> */}
         <div className="footer">
           <Footer />
         </div>

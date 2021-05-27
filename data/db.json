@@ -57,11 +57,32 @@
       "id": 11
     },
     {
-      "title": "w",
-      "description": "w",
-      "snippet": "w",
-      "category": "a",
-      "id": 12
+      "title": "6",
+      "description": "6",
+      "snippet": "6",
+      "category": "React",
+      "id": 20
+    },
+    {
+      "title": "",
+      "description": "",
+      "snippet": "",
+      "category": "t",
+      "id": 21
+    },
+    {
+      "title": "6",
+      "description": "6",
+      "snippet": "6",
+      "category": "t",
+      "id": 22
+    },
+    {
+      "title": "4",
+      "description": "4",
+      "snippet": "const Snippets = ({\n  snippets,\n  onDelete,\n  btns,\n  handleBtnsFetch,\n  showSearch,\n}) => {\n  const [searchTerm, setSearchTerm] = useState(\"\");\n  const [snippetCopy, setSnippetCopy] = useState([]);",
+      "category": "React",
+      "id": 23
     }
   ]
 }
