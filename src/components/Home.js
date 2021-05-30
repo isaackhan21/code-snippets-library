@@ -10,6 +10,7 @@ const Home = ({
   handleBtns,
   isLoading,
   error,
+  deleteBtn,
 }) => {
   const {
     data: snippetsFetch,
@@ -18,16 +19,19 @@ const Home = ({
   } = useFetch("http://localhost:8000/snippets");
   const [snippetCopy, setSnippetCopy] = useState([]);
   const [showSearch, setShowSearch] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
   const handleBtnsFetch = (e) => {
     let snippetCopy;
     if (e.target.value === "All") {
       setSnippetCopy(snippetsFetch);
       setShowSearch(true);
+      setShowMessage(true);
     } else {
       setSnippetCopy(
         snippetsFetch.filter((snippet) => snippet.category === e.target.value)
       );
       setShowSearch(true);
+      setShowMessage(true);
     }
   };
   return (
@@ -41,6 +45,8 @@ const Home = ({
           btns={btns}
           handleBtnsFetch={handleBtnsFetch}
           showSearch={showSearch}
+          deleteBtn={deleteBtn}
+          showMessage={showMessage}
         />
       )}
     </div>

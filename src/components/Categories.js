@@ -5,8 +5,15 @@ import Snippets from "./Snippets";
 import _ from "lodash";
 import useFetch from "../useFetch";
 import { useState } from "react";
+import Button from "./Button";
 
-const Categories = ({ handleBtnsFetch, snippets, snippetsCat, btns }) => {
+const Categories = ({
+  handleBtnsFetch,
+  snippets,
+  snippetsCat,
+  btns,
+  deleteBtn,
+}) => {
   const [snippetCopy, setSnippetCopy] = useState([]);
   // let newArr = snippetsCat.map((snippet) => snippet.category);
   // let categorySet = new Set(newArr);
@@ -36,30 +43,36 @@ const Categories = ({ handleBtnsFetch, snippets, snippetsCat, btns }) => {
 
   return (
     <div className="cat-btns">
-      {/* <button
-        value="All"
-        onClick={(func) => {
-          routeChange(func);
-          handleBtns(func);
-        }}
-      >
-        All
-      </button> */}
+      <div className="all">
+        <button
+          className="cat-btn"
+          value="All"
+          onClick={(func) => {
+            routeChange(func);
+            handleBtnsFetch(func);
+          }}
+        >
+          All
+        </button>
+      </div>
       {btns &&
-        btns.map((snippet, index) => {
+        btns.map((btn, index) => {
           return (
-            <div key={index}>
+            <div className="category" key={index}>
+              <button className="delete-cat" onClick={() => deleteBtn(index)}>
+                Delete
+              </button>
               <button
                 className="cat-btn"
-                value={snippet}
-                key={snippet.id}
+                value={btn}
+                // key={snippet.id}
                 onClick={(func) => {
                   routeChange(func);
                   handleBtnsFetch(func);
-                  console.log("Clicked!", snippet);
+                  console.log("Clicked!", btn);
                 }}
               >
-                {snippet}
+                {btn}
               </button>
             </div>
           );

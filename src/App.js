@@ -24,6 +24,7 @@ function App() {
   const [snipCat, setSnipCat] = useState([]);
   // const [btns, setbtns] = useState(["All", "React"]);
   const [btns, setbtns] = useState(btnsfromLocalStorage);
+
   const {
     data: snippets,
     isLoading,
@@ -60,7 +61,9 @@ function App() {
   // };
 
   const deleteBtn = (id) => {
-    setbtns(btns.filter((btn) => btn.id !== id));
+    setbtns((btns) => btns.filter((btn, index) => index !== id));
+    // setbtns(btns.splice(index, 1));
+    // localStorage.setItem("btns", JSON.stringify(btns));
   };
 
   const addCategory = (category) => {
@@ -123,6 +126,7 @@ function App() {
             addCategoryText={addCategoryText}
             isLoading={isLoading}
             error={error}
+            deleteBtn={deleteBtn}
 
             // handleBtns={handleBtns}
           />

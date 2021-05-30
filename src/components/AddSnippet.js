@@ -14,7 +14,7 @@ const AddSnippet = ({
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [snippet, setSnippet] = useState("");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState(btns[0]);
   const [isDropDown, setIsDropdown] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
@@ -37,7 +37,6 @@ const AddSnippet = ({
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(snippets),
     }).then(() => {
-      console.log("w");
       setIsLoading(false);
       history.push("/");
     });

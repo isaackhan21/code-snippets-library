@@ -29,13 +29,6 @@
       "id": 6
     },
     {
-      "title": "1",
-      "description": "1",
-      "snippet": "1",
-      "category": "1",
-      "id": 8
-    },
-    {
       "title": "q",
       "description": "qq",
       "snippet": "",
@@ -83,6 +76,363 @@
       "snippet": "const Snippets = ({\n  snippets,\n  onDelete,\n  btns,\n  handleBtnsFetch,\n  showSearch,\n}) => {\n  const [searchTerm, setSearchTerm] = useState(\"\");\n  const [snippetCopy, setSnippetCopy] = useState([]);",
       "category": "React",
       "id": 23
+    },
+    {
+      "title": "s",
+      "description": "s",
+      "snippet": "s",
+      "category": "s",
+      "id": 24
+    },
+    {
+      "title": "6",
+      "description": "6",
+      "snippet": "6",
+      "category": "",
+      "id": 25
+    },
+    {
+      "title": "e",
+      "description": "e",
+      "snippet": "e",
+      "category": "f",
+      "id": 26
+    },
+    {
+      "title": "w",
+      "description": "w",
+      "snippet": "w",
+      "category": "a",
+      "id": 27
+    },
+    {
+      "title": "sd",
+      "description": "s",
+      "snippet": "sd",
+      "category": "a",
+      "id": 28
+    },
+    {
+      "title": "5",
+      "description": "5",
+      "snippet": "5",
+      "category": "f",
+      "id": 29
+    },
+    {
+      "title": "6",
+      "description": "6",
+      "snippet": "6",
+      "category": "f",
+      "id": 30
+    },
+    {
+      "title": "7",
+      "description": "7",
+      "snippet": "7",
+      "category": "a",
+      "id": 31
+    },
+    {
+      "title": "9",
+      "description": "9",
+      "snippet": "9",
+      "category": "a",
+      "id": 32
+    },
+    {
+      "title": "q",
+      "description": "q",
+      "snippet": "q",
+      "category": "f",
+      "id": 33
+    },
+    {
+      "title": "`",
+      "description": "`",
+      "snippet": "`",
+      "category": "f",
+      "id": 34
+    },
+    {
+      "title": "5",
+      "description": "5",
+      "snippet": "5",
+      "category": "f",
+      "id": 35
+    },
+    {
+      "title": "fef",
+      "description": "refrf",
+      "snippet": "refref",
+      "category": "f",
+      "id": 36
+    },
+    {
+      "title": "gfr",
+      "description": "g",
+      "snippet": "g",
+      "category": "f",
+      "id": 37
+    },
+    {
+      "title": "v",
+      "description": "v",
+      "snippet": "v",
+      "category": "",
+      "id": 38
+    },
+    {
+      "title": "v",
+      "description": "v",
+      "snippet": "v",
+      "category": "",
+      "id": 39
+    },
+    {
+      "title": "45",
+      "description": "45",
+      "snippet": "45",
+      "category": "f",
+      "id": 40
+    },
+    {
+      "title": "4",
+      "description": "4",
+      "snippet": "4",
+      "category": "test",
+      "id": 41
+    },
+    {
+      "title": "c",
+      "description": "c",
+      "snippet": "c",
+      "category": "tet",
+      "id": 42
+    },
+    {
+      "title": "ca",
+      "description": "ca",
+      "snippet": "a",
+      "category": "ca",
+      "id": 43
+    },
+    {
+      "title": "d",
+      "description": "d",
+      "snippet": "d",
+      "category": "tet",
+      "id": 44
+    },
+    {
+      "title": "d",
+      "description": "d",
+      "snippet": "d",
+      "category": "tetee",
+      "id": 45
+    },
+    {
+      "title": "v",
+      "description": "v",
+      "snippet": "v",
+      "category": "tetee",
+      "id": 46
+    },
+    {
+      "title": "dee",
+      "description": "e",
+      "snippet": "e",
+      "category": "tetee",
+      "id": 47
+    },
+    {
+      "title": "q",
+      "description": "q",
+      "snippet": "q",
+      "category": "q",
+      "id": 48
+    },
+    {
+      "title": "x",
+      "description": "x",
+      "snippet": "x",
+      "category": "q",
+      "id": 49
+    },
+    {
+      "title": "www",
+      "description": "wwww",
+      "snippet": "www",
+      "category": "www",
+      "id": 50
+    },
+    {
+      "title": "c",
+      "description": "c",
+      "snippet": "c",
+      "category": "c",
+      "id": 51
+    },
+    {
+      "title": "x",
+      "description": "x",
+      "snippet": "x",
+      "category": "c",
+      "id": 52
+    },
+    {
+      "title": "a",
+      "description": "q",
+      "snippet": "q",
+      "category": "6",
+      "id": 53
+    },
+    {
+      "title": "b",
+      "description": "b",
+      "snippet": "b",
+      "category": "ll",
+      "id": 54
+    },
+    {
+      "title": "gfeg",
+      "description": "gfgdfg",
+      "snippet": "gfgg",
+      "category": "brr",
+      "id": 55
+    },
+    {
+      "title": "vv",
+      "description": "vvv",
+      "snippet": "vvv",
+      "category": "444",
+      "id": 56
+    },
+    {
+      "title": "rfre",
+      "description": "rgrtgrt",
+      "snippet": "rgrtgr",
+      "category": "trgrtgrt",
+      "id": 57
+    },
+    {
+      "title": "tt",
+      "description": "ttt",
+      "snippet": "ttt",
+      "category": "trgrtgrt5555",
+      "id": 58
+    },
+    {
+      "title": "dd",
+      "description": "dd",
+      "snippet": "dd",
+      "category": "ddd",
+      "id": 59
+    },
+    {
+      "title": "dd",
+      "description": "dd",
+      "snippet": "dddddd",
+      "category": "dddd",
+      "id": 60
+    },
+    {
+      "title": "dd",
+      "description": "dd",
+      "snippet": "dd",
+      "category": "ddddddd",
+      "id": 61
+    },
+    {
+      "title": "a",
+      "description": "a",
+      "snippet": "a",
+      "category": "a",
+      "id": 62
+    },
+    {
+      "title": "s",
+      "description": "s",
+      "snippet": "s",
+      "category": "s",
+      "id": 63
+    },
+    {
+      "title": "s",
+      "description": "s",
+      "snippet": "s",
+      "category": "s",
+      "id": 64
+    },
+    {
+      "title": "1",
+      "description": "1",
+      "snippet": "1",
+      "category": "s11",
+      "id": 65
+    },
+    {
+      "title": "e",
+      "description": "e",
+      "snippet": "e",
+      "category": "e",
+      "id": 66
+    },
+    {
+      "title": "s",
+      "description": "s",
+      "snippet": "s",
+      "category": "s",
+      "id": 67
+    },
+    {
+      "title": "a",
+      "description": "a",
+      "snippet": "a",
+      "category": "a",
+      "id": 68
+    },
+    {
+      "title": "a",
+      "description": "a",
+      "snippet": "a",
+      "category": "aa",
+      "id": 69
+    },
+    {
+      "title": "f",
+      "description": "f",
+      "snippet": "f",
+      "category": "f",
+      "id": 70
+    },
+    {
+      "title": "w",
+      "description": "w",
+      "snippet": "w",
+      "category": "f",
+      "id": 71
+    },
+    {
+      "title": "z",
+      "description": "z",
+      "snippet": "z",
+      "category": "z",
+      "id": 72
+    },
+    {
+      "title": "e",
+      "description": "e",
+      "snippet": "e",
+      "category": "z",
+      "id": 73
+    },
+    {
+      "title": "eq",
+      "description": "eq",
+      "snippet": "q",
+      "category": "z",
+      "id": 74
     }
   ]
 }

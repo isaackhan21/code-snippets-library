@@ -16,6 +16,7 @@ const Base = ({
   isLoading,
   error,
   handleBtns,
+  deleteBtn,
 }) => {
   return (
     <div className="base">
@@ -28,6 +29,7 @@ const Base = ({
             handleBtns={handleBtns}
             isLoading={isLoading}
             error={error}
+            deleteBtn={deleteBtn}
           />
         </Route>
         <Route exact path="/create">

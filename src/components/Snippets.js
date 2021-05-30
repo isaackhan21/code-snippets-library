@@ -8,6 +8,8 @@ const Snippets = ({
   btns,
   handleBtnsFetch,
   showSearch,
+  deleteBtn,
+  showMessage,
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [snippetCopy, setSnippetCopy] = useState([]);
@@ -31,6 +33,7 @@ const Snippets = ({
             btns={btns}
             handleBtnsFetch={handleBtnsFetch}
             snippets={snippets}
+            deleteBtn={deleteBtn}
           />
         </div>
         <div className="snippets">
@@ -67,7 +70,7 @@ const Snippets = ({
                       onDelete={onDelete}
                     />
                   ))
-              : "No Snippets"}
+              : showMessage && "No Snippets, Select another Category "}
           </div>
         </div>
       </div>
