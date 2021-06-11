@@ -1,6 +1,7 @@
 import SnippetPreview from "./SnippetPreview";
 import { useState } from "react";
 import Categories from "./Categories";
+import { Link } from "react-router-dom";
 
 const Snippets = ({
   snippets,
@@ -37,18 +38,30 @@ const Snippets = ({
           />
         </div>
         <div className="snippets">
-          <div className="search">
-            {showSearch && (
-              <input
-                className="search-snippet"
-                type="text"
-                placeholder="   Search Snippet..."
-                onChange={(e) => {
-                  setSearchTerm(e.target.value);
-                }}
-              />
-            )}
+          <div className="top-elements">
+            <Link className="create-link" to="/create">
+              <div className="add-snippet-div">
+                <h3>Add Snippet</h3>
+              </div>
+            </Link>
+            <div className="search">
+              {showSearch && (
+                <input
+                  className="search-snippet"
+                  type="text"
+                  placeholder="   Search Snippet..."
+                  onChange={(e) => {
+                    setSearchTerm(e.target.value);
+                  }}
+                />
+              )}
+            </div>
           </div>
+          {!showSearch && (
+            <div className="intro-message">
+              <h1>Welcome to Code Snippets</h1>
+            </div>
+          )}
           <div className="snippet-items">
             {snippets.length > 0
               ? snippets
@@ -57,6 +70,24 @@ const Snippets = ({
                       return snippet;
                     } else if (
                       snippet.title
+                        .toLowerCase()
+                        .includes(searchTerm.toLowerCase())
+                    ) {
+                      return snippet;
+                    } else if (
+                      snippet.description
+                        .toLowerCase()
+                        .includes(searchTerm.toLowerCase())
+                    ) {
+                      return snippet;
+                    } else if (
+                      snippet.project
+                        .toLowerCase()
+                        .includes(searchTerm.toLowerCase())
+                    ) {
+                      return snippet;
+                    } else if (
+                      snippet.category
                         .toLowerCase()
                         .includes(searchTerm.toLowerCase())
                     ) {

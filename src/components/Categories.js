@@ -42,45 +42,47 @@ const Categories = ({
   // const uniqueCat = [...new Set(categories)];
 
   return (
-    <div className="cat-btns">
-      <div className="all">
-        <button
-          className="cat-btn"
-          value="All"
-          onClick={(func) => {
-            routeChange(func);
-            handleBtnsFetch(func);
-          }}
-        >
-          All
-        </button>
-      </div>
-      {btns &&
-        btns.map((btn, index) => {
-          return (
-            <div className="category" key={index}>
-              <button className="delete-cat" onClick={() => deleteBtn(index)}>
-                Delete
-              </button>
-              <button
-                className="cat-btn"
-                value={btn}
-                // key={snippet.id}
-                onClick={(func) => {
-                  routeChange(func);
-                  handleBtnsFetch(func);
-                  console.log("Clicked!", btn);
-                }}
-              >
-                {btn}
-              </button>
-            </div>
-          );
-        })}
+    <div className="cat-block">
+      <h1 className="cat-title">Categories</h1>
+      <div className="cat-btns">
+        <div className="all">
+          <button
+            className="cat-btn"
+            value="All"
+            onClick={(func) => {
+              routeChange(func);
+              handleBtnsFetch(func);
+            }}
+          >
+            All
+          </button>
+        </div>
+        {btns &&
+          btns.map((btn, index) => {
+            return (
+              <div className="category" key={index}>
+                <button className="delete-cat" onClick={() => deleteBtn(index)}>
+                  Delete
+                </button>
+                <button
+                  className="cat-btn"
+                  value={btn}
+                  // key={snippet.id}
+                  onClick={(func) => {
+                    routeChange(func);
+                    handleBtnsFetch(func);
+                    console.log("Clicked!", btn);
+                  }}
+                >
+                  {btn}
+                </button>
+              </div>
+            );
+          })}
 
-      {/* {snippets && <Snippets snippets={snippets} btns={btns} />} */}
+        {/* {snippets && <Snippets snippets={snippets} btns={btns} />} */}
 
-      {/* {snippets.map((snippet) => {
+        {/* {snippets.map((snippet) => {
         return (
           <div>
             <button
@@ -96,7 +98,7 @@ const Categories = ({
         );
       })} */}
 
-      {/* <button
+        {/* <button
         value="Javascript"
         onClick={(func) => {
           routeChange(func);
@@ -125,6 +127,7 @@ const Categories = ({
       </button>
       <button>Back</button>
     </div> */}
+      </div>
     </div>
   );
 };

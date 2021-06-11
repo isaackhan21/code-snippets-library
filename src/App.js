@@ -24,6 +24,7 @@ function App() {
   const [snipCat, setSnipCat] = useState([]);
   // const [btns, setbtns] = useState(["All", "React"]);
   const [btns, setbtns] = useState(btnsfromLocalStorage);
+  const [showAddSnippet, setShowAddSnippet] = useState(true);
 
   const {
     data: snippets,
@@ -64,6 +65,10 @@ function App() {
     setbtns((btns) => btns.filter((btn, index) => index !== id));
     // setbtns(btns.splice(index, 1));
     // localStorage.setItem("btns", JSON.stringify(btns));
+  };
+
+  const addSnippetButton = (e) => {
+    e.preventDefault();
   };
 
   const addCategory = (category) => {
@@ -111,7 +116,10 @@ function App() {
     <Router>
       <div className="container">
         <div className="header">
-          <Header />
+          <Header
+            showAddSnippet={showAddSnippet}
+            addSnippetButton={addSnippetButton}
+          />
         </div>
         {/* {error && <div>{error}</div>}
         {isLoading && <div>Loading...</div>} */}
@@ -127,6 +135,7 @@ function App() {
             isLoading={isLoading}
             error={error}
             deleteBtn={deleteBtn}
+            showAddSnippet={showAddSnippet}
 
             // handleBtns={handleBtns}
           />

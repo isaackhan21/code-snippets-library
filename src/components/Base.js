@@ -17,6 +17,7 @@ const Base = ({
   error,
   handleBtns,
   deleteBtn,
+  showAddSnippet,
 }) => {
   return (
     <div className="base">
@@ -40,6 +41,7 @@ const Base = ({
             btns={btns}
             addCategory={addCategory}
             addCategoryText={addCategoryText}
+            showAddSnippet={showAddSnippet}
           />
         </Route>
         <Route path="/create/edit/:id">

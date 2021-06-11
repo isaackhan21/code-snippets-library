@@ -20,6 +20,7 @@ const Home = ({
   const [snippetCopy, setSnippetCopy] = useState([]);
   const [showSearch, setShowSearch] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
+  // const [showIntro, setShowIntro] = useState(true);
   const handleBtnsFetch = (e) => {
     let snippetCopy;
     if (e.target.value === "All") {
@@ -34,11 +35,16 @@ const Home = ({
       setShowMessage(true);
     }
   };
+
+  // const showIntroTitle = () => {
+  //   setShowIntro(false);
+  // };
   return (
     <div className="home">
       {isLoadingFetch && <div>Loading...</div>}
       {errorFetch && <div>{errorFetch}</div>}
       {/* <Categories btns={btns} snippets={snippetsFetch} /> */}
+      {/* {showIntro && <h3>Welcome to the Code Snippet Library!</h3>} */}
       {snippetsFetch && (
         <Snippets
           snippets={snippetCopy}
