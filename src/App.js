@@ -17,13 +17,13 @@ import { useState, useEffect } from "react";
 import Prism from "prismjs";
 import { useHistory } from "react-router-dom";
 
-const btnsfromLocalStorage = JSON.parse(localStorage.getItem("btns")) || "[]";
+// const btnsfromLocalStorage = JSON.parse(localStorage.getItem("btns")) || "[]";
 
 function App() {
   const [snippetCopy, setSnippetCopy] = useState([]);
   const [snipCat, setSnipCat] = useState([]);
   // const [btns, setbtns] = useState(["All", "React"]);
-  const [btns, setbtns] = useState(btnsfromLocalStorage);
+  const [btns, setbtns] = useState([]);
   const [showAddSnippet, setShowAddSnippet] = useState(true);
 
   const {
@@ -46,9 +46,9 @@ function App() {
   //   setbtns();
   // }, []);
 
-  useEffect(() => {
-    localStorage.setItem("btns", JSON.stringify(btns));
-  }, [btns]);
+  // useEffect(() => {
+  //   localStorage.setItem("btns", JSON.stringify(btns));
+  // }, [btns]);
 
   // const handleBtns = (e) => {
   //   let snippetCopy;
