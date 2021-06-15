@@ -1,14 +1,21 @@
 @import url("ft-syntax-highlight.css");
 @import url("https://fonts.googleapis.com/css2?family=Cousine&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+  font-weight: 400;
 }
 
 body {
   height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+.code-block {
 }
 
 .container {
@@ -22,9 +29,10 @@ body {
 }
 
 .header {
-  background-color: red;
+  background-color: gray;
   grid-area: header;
-  height: 300px;
+  /* height: 300px; */
+  height: 100px;
 }
 
 .sidebar {
@@ -33,7 +41,7 @@ body {
 }
 
 .base {
-  background-color: grey;
+  background-color: #a8a8a8;
   grid-area: base;
   /* height: 607px; */
   /* height: auto; */
@@ -41,7 +49,7 @@ body {
 }
 
 .footer {
-  background-color: blue;
+  background-color: gray;
   grid-area: footer;
 }
 
@@ -89,7 +97,7 @@ body {
   flex-direction: column;
   align-items: center;
   border: none;
-  margin: 2rem;
+  margin-top: 4rem;
 }
 
 .snippet {
@@ -113,6 +121,7 @@ body {
   margin: 1.5rem;
   width: 200px;
   transition: transform 0.2s;
+  font-family: "Montserrat", sans-serif;
 }
 
 button:hover {
@@ -126,29 +135,37 @@ button:hover {
 .box {
   display: flex;
   flex-direction: row;
+  height: 600px;
 }
 
 .snippets-list {
 }
 
 .snippets {
-  background-color: teal;
+  background-color: #a8a8a8;
   width: 75vw;
   overflow: scroll;
   /* height: 607px; */
-  height: 593px;
+  /* height: 593px; */
+  /* height: 588px; */
+  height: 80vh;
   text-align: center;
+  margin-top: 0.25rem;
 }
 
 .categories {
-  background-color: thistle;
+  background-color: #a8a8a8;
   text-align: center;
   width: 25vw;
   /* height: 85vh; */
-  height: 595px;
+  /* height: 595px; */
+  /* height: 584px; */
+  height: 80vh;
   /* height: 40vh; */
-  margin: 0 auto;
+  margin-top: 0.3rem;
+  /* margin-bottom: 0.9rem; */
   overflow: scroll;
+  border-right: 1px solid black;
 }
 
 .search-snippet {
@@ -162,6 +179,8 @@ button:hover {
   padding: 1em;
   border-radius: 0.2rem;
   cursor: pointer;
+  color: white;
+  font-family: "Montserrat", sans-serif;
 }
 
 .btn:hover {
@@ -186,11 +205,12 @@ button:hover {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  font-family: "Montserrat", sans-serif;
 }
 
 .cat-btn:hover {
   transform: scale(1.3);
-  background-color: grey;
+  /* background-color: grey; */
   cursor: pointer;
 }
 
@@ -212,6 +232,7 @@ button:hover {
   margin: 1rem;
   padding-left: 1rem;
   outline: none;
+  font-family: "Montserrat", sans-serif;
 }
 
 .snippet-items {
@@ -230,6 +251,9 @@ button:hover {
   text-align: center;
 
   color: white;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .snippet-form {
@@ -243,20 +267,21 @@ button:hover {
 
 .header-title {
   margin: 1.5rem;
+  color: white;
 }
 
 .snippet-item {
-  background-color: red;
+  background-color: whitesmoke;
   width: 30vw;
   height: 20vh;
   transition: transform 0.2s;
   border-radius: 0.2rem;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .snippet-item:hover {
   transform: scale(1.1);
-  background-color: grey;
+  /* background-color: grey; */
   cursor: pointer;
 }
 
@@ -319,6 +344,7 @@ button:hover {
   margin-left: 14rem;
   background-color: red;
   transition: transform 0.2s;
+  font-family: "Montserrat", sans-serif;
 }
 
 .delete-cat:hover {
@@ -344,11 +370,12 @@ button:hover {
   align-items: center;
   text-align: center;
   /* margin-right: 1.5rem; */
-  margin: 0.6rem;
+  margin: 1.5rem;
   cursor: pointer;
   background-color: blue;
   transition: transform(0.2s);
   border-radius: 4px;
+  color: white;
 }
 
 .cat-input-btn:hover {
@@ -358,6 +385,14 @@ button:hover {
 .cat-title {
   margin-top: 2rem;
   background-color: whitesmoke;
+  border-radius: 0.4rem;
+  width: 200px;
+  text-align: center;
+}
+
+.cat-title-block {
+  display: flex;
+  justify-content: center;
 }
 
 .textarea-des {
@@ -371,6 +406,7 @@ button:hover {
   outline: none;
   resize: none;
   background-color: whitesmoke;
+  font-family: "Montserrat", sans-serif;
 }
 
 .input-title {
@@ -382,6 +418,7 @@ button:hover {
   border-radius: 2px;
   outline: none;
   margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
 }
 
 .textarea-snippet {
@@ -398,7 +435,7 @@ button:hover {
   font-family: "Cousine", monospace;
   font-size: 1rem;
   white-space: pre;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
 .dropdown-input {
@@ -409,6 +446,7 @@ button:hover {
   border-radius: 2px;
   outline: none;
   width: 40vw;
+  font-family: "Montserrat", sans-serif;
 }
 
 .create-cat {
@@ -417,6 +455,7 @@ button:hover {
   border-radius: 2px;
   outline: none;
   width: 40vw;
+  font-family: "Montserrat", sans-serif;
 }
 
 .categories-add {
@@ -442,6 +481,8 @@ button:hover {
 
 .add-snippet-title {
   text-align: center;
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 .top-buttons {
@@ -459,6 +500,9 @@ button:hover {
   height: 70vh;
   overflow: scroll;
   margin-top: 4rem;
+  background-color: #a8a8a8;
+  padding: 2em;
+  border-radius: 4px;
 }
 
 .top-elements {
@@ -475,14 +519,14 @@ button:hover {
   align-items: center;
   width: 200px;
   height: 40px;
-  background-color: grey;
-  border-radius: 2px;
+  background-color: blue;
+  border-radius: 4px;
   transition: transform(0.2s);
 }
 
 .add-snippet-div:hover {
   transform: scale(1.1);
-  background-color: grey;
+  /* background-color: grey; */
   cursor: pointer;
 }
 
@@ -490,7 +534,11 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  height: 800px;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-weight: bold;
 }
 
 .project-name {
@@ -502,11 +550,13 @@ button:hover {
   border-radius: 2px;
   outline: none;
   margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
 }
 
 .project-category-div {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  /* flex-direction: column; */
   align-items: center;
   height: 50px;
 }
@@ -521,8 +571,9 @@ button:hover {
 }
 
 .form-page {
-  /* height: 100vh; */
+  height: 100vh;
   margin: 0 auto;
+  background-color: whitesmoke;
 }
 
 .detail-body {
@@ -550,7 +601,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   margin: 2rem;
-  background-color: gray;
+  background-color: #a8a8a8;
   border-radius: 4px;
   min-height: 50px;
 }
@@ -560,9 +611,19 @@ button:hover {
   justify-content: center;
   align-items: center;
   margin: 2rem;
-  background-color: gray;
+  background-color: #a8a8a8;
   border-radius: 4px;
   min-height: 50px;
+  overflow-wrap: break-word;
+  display: inline-block;
+  /* height: fit-content; */
+  /* text-overflow: ellipsis;
+  white-space: nowrap; */
+}
+
+.detail-des-div h2 {
+  /* width: 60%; */
+  /* margin: 0 auto; */
 }
 
 .detail-project-div,
@@ -570,12 +631,12 @@ button:hover {
   display: flex;
   /* justify-content: center; */
   align-items: center;
-  background-color: gray;
+  background-color: #a8a8a8;
   padding: 1rem;
   border-radius: 4px;
   /* min-width: 200px;
   max-width: 400px; */
-  width: 400px;
+  width: 500px;
   height: 50px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -583,18 +644,21 @@ button:hover {
 }
 
 .snippet-title-div {
-  background-color: gray;
+  /* background-color: gray; */
   min-height: 20px;
+  font-size: 1.5rem;
+  color: black;
 }
 
 .snippet-des-div {
-  background-color: gray;
+  /* background-color: gray; */
   margin-top: 1rem;
+  color: black;
 }
 
 .snippet-project-div,
 .snippet-cat-div {
-  background-color: gray;
+  /* background-color: gray; */
   padding: 0.5rem;
   margin-top: 2rem;
   width: 200px;
@@ -602,6 +666,8 @@ button:hover {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  text-align: center;
+  color: black;
 }
 
 .categories-add {
@@ -609,13 +675,14 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 1.5rem;
 }
 
 .copied {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: gray;
+  background-color: #a8a8a8;
   height: 50px;
   width: 100px;
   cursor: pointer;
@@ -639,4 +706,68 @@ button:hover {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.label {
+  text-align: center;
+  margin: 2rem;
+  font-size: 1.3rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  margin-bottom: 4rem;
+}
+
+.cats {
+}
+
+.code-div {
+  margin-top: 5rem;
+}
+
+.intro-message {
+  /* margin: 0 auto; */
+
+  margin: 0 auto;
+  height: 50vh;
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.snippet-title {
+  color: black;
+}
+
+.snippet-description {
+  color: black;
+}
+
+.home-link-div {
+  background-color: white;
+  padding: 1em;
+  color: black;
+  border-radius: 4px;
+  transition: transform(0.2s);
+}
+
+.home-link-div:hover {
+  transform: scale(1.1);
+}
+
+.intro-message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
 }

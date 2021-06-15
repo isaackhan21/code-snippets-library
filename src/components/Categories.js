@@ -43,7 +43,9 @@ const Categories = ({
 
   return (
     <div className="cat-block">
-      <h1 className="cat-title">Categories</h1>
+      <div className="cat-title-block">
+        <h1 className="cat-title">Categories</h1>
+      </div>
       <div className="cat-btns">
         <div className="all">
           <button

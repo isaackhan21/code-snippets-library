@@ -51,15 +51,21 @@ const SnippetDetail = ({ snippets, prism }) => {
           <div className="detail-body">
             <div className="detail-title-des">
               <div className="detail-title-div">
-                <h1 className="detail-title">{snippet.title}</h1>
+                <h1 className="detail-title">
+                  {snippet.title ? snippet.title : "No Title"}
+                </h1>
               </div>
               <div className="detail-des-div">
-                <h2 className="detail-des">{snippet.description}</h2>
+                <h2 className="detail-des">
+                  {snippet.description ? snippet.description : "No Description"}
+                </h2>
               </div>
             </div>
             <div className="detail-project-cat">
               <div className="detail-project-div">
-                <h2>Project: {snippet.project}</h2>
+                <h2>
+                  Project: {snippet.project ? snippet.project : "No Project"}
+                </h2>
               </div>
               <div className="detail-cat-div">
                 <h2>Category: {snippet.category}</h2>

@@ -76,6 +76,7 @@ const AddSnippet = ({
               <div className="top-inputs">
                 <div className="title-cat">
                   <div className="title">
+                    <label className="label">Add Snippet Title</label>
                     <input
                       className="input-title"
                       type="text"
@@ -92,52 +93,48 @@ const AddSnippet = ({
                       <p>
                         {isDropDown ? "Create Category" : "Select Category"}
                       </p>
-                      {/* <Button
-                        text={
-                          isDropDown ? "Create Category" : "Select Category"
-                        }
-                        color="blue"
-                        onClick={() => setIsDropdown(!isDropDown)}
-                      /> */}
                     </div>
                     {/* <Button
             text="Change"
             color="blue"
             onClick={() => setIsDropdown(!isDropDown)}
           /> */}
-                    {isDropDown && (
-                      <div className="category-dropdown">
-                        <label>Select Category</label>
-                        <select
-                          className="dropdown-input"
-                          value={category}
-                          onChange={(e) => setCategory(e.target.value)}
-                        >
-                          {btns.map((snippet, index) => (
-                            <option
-                              selected="selected"
-                              key={index}
-                              // value={snippet.category}
-                            >
-                              {/* {snippet.category} */}
-                              {snippet}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-                    )}
-                    {!isDropDown && (
-                      <div className="category-input">
-                        <label>Create Category</label>
-                        <input
-                          className="create-cat"
-                          type="text"
-                          placeholder="Add Category"
-                          value={category}
-                          onChange={(e) => setCategory(e.target.value)}
-                        />
-                      </div>
-                    )}
+                    <div className="cats">
+                      {isDropDown && (
+                        <div className="category-dropdown">
+                          <label className="label">Select Category</label>
+                          <select
+                            className="dropdown-input"
+                            value={category}
+                            onChange={(e) => setCategory(e.target.value)}
+                          >
+                            {btns.map((snippet, index) => (
+                              <option
+                                selected="selected"
+                                key={index}
+                                // value={snippet.category}
+                              >
+                                {/* {snippet.category} */}
+                                {snippet}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+                      )}
+                      {!isDropDown && (
+                        <div className="category-input">
+                          <label className="label">Create Category</label>
+                          <input
+                            className="create-cat"
+                            type="text"
+                            placeholder="Add Category"
+                            value={category}
+                            onChange={(e) => setCategory(e.target.value)}
+                            required
+                          />
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
                 <div className="des-project">
@@ -152,7 +149,9 @@ const AddSnippet = ({
                     />
                   </div>
                   <div className="project-name-div">
-                    <label className="label">Project Name</label>
+                    <label className="project-label" className="label">
+                      Project Name (Not Required)
+                    </label>
                     <input
                       className="project-name"
                       type="text"
@@ -164,13 +163,14 @@ const AddSnippet = ({
                 </div>
               </div>
               <div className="snippet">
-                <label>Snippet</label>
+                <label className="label">Snippet</label>
                 <textarea
                   className="textarea-snippet"
                   type="text"
                   placeholder="Add Snippet"
                   value={snippet}
                   onChange={(e) => setSnippet(e.target.value)}
+                  required
                 ></textarea>
               </div>
 

@@ -58,8 +58,11 @@ const Snippets = ({
             </div>
           </div>
           {!showSearch && (
-            <div className="intro-message">
-              <h1>Welcome to Code Snippets</h1>
+            <div className="intro-message-container">
+              <div className="intro-message">
+                <h1>Welcome to the Code Snippets Library</h1>
+                <h1>Please Select a Category or Add a Snippet</h1>
+              </div>
             </div>
           )}
           <div className="snippet-items">

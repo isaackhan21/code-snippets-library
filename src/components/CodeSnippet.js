@@ -36,10 +36,12 @@ const CodeSnippet = ({ prism, snippet }) => {
           </div>
         </div>
       </CopyToClipboard>
-      <pre className="line-numbers">
-        {/* <div>{isCopied && <h3>Copied</h3>}</div> */}
-        <code className="language-js">{snippet.snippet}</code>
-      </pre>
+      <div className="code-block">
+        <pre className="line-numbers">
+          {/* <div>{isCopied && <h3>Copied</h3>}</div> */}
+          <code className="language-js">{snippet.snippet}</code>
+        </pre>
+      </div>
     </div>
   );
 };
