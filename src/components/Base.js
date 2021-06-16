@@ -4,6 +4,7 @@ import Home from "./Home";
 import AddSnippet from "./AddSnippet";
 import SnippetDetail from "./SnippetDetail";
 import EditSnippet from "./EditSnippet";
+import ErrorPage from "./ErrorPage";
 
 const Base = ({
   snippets,
@@ -52,6 +53,9 @@ const Base = ({
         {/* </Route> */}
         <Route exact path="/snippets/:id">
           <SnippetDetail snippets={snippets} prism={prism} />
+        </Route>
+        <Route path="*">
+          <ErrorPage />
         </Route>
       </Switch>
     </div>

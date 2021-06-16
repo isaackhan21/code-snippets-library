@@ -771,3 +771,46 @@ button:hover {
   align-items: center;
   height: 150px;
 }
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  margin-top: 4rem;
+}
+
+.oops {
+  font-size: 9rem;
+  margin-bottom: 2rem;
+}
+
+.error-page-p {
+  margin: 1rem;
+  font-size: 1.4rem;
+}
+
+.error-link-div {
+  margin-top: 1.5rem;
+  transition: transform(0.2s);
+  background-color: blue;
+  border-radius: 4px;
+}
+
+.error-link-text {
+  text-decoration: none;
+  color: white;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.error-link-div:hover {
+  transform: scale(1.1);
+}
+
+.error-link {
+  text-decoration: none;
+}
