@@ -30,7 +30,7 @@ function App() {
     data: snippets,
     isLoading,
     error,
-  } = useFetch("http://localhost:8000/snippets");
+  } = useFetch("https://react-snippet.herokuapp.com/snippets");
 
   function usePrismHighlightAll() {
     useEffect(() => {
