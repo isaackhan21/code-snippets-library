@@ -16,7 +16,7 @@ const Home = ({
     data: snippetsFetch,
     isLoadingFetch,
     errorFetch,
-  } = useFetch("https://react-snippet.herokuapp.com/snippets");
+  } = useFetch("react-snippet.herokuapp.com/snippets");
   const [snippetCopy, setSnippetCopy] = useState([]);
   const [showSearch, setShowSearch] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
