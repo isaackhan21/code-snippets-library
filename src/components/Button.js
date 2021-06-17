@@ -13,3 +13,4 @@ const Button = ({ color, text, onClick }) => {
 };
 
 export default Button;
+t;

@@ -18,11 +18,11 @@ const SnippetDetail = ({ snippets, prism }) => {
     data: snippet,
     error,
     isLoading,
-  } = useFetch("react-snippet.herokuapp.com/snippets/" + id);
+  } = useFetch("https://react-snippet.herokuapp.com/api/snippets/" + id);
   const history = useHistory();
 
   const handleClick = () => {
-    fetch("react-snippet.herokuapp.com/snippets/" + snippet.id, {
+    fetch("https://react-snippet.herokuapp.com/api/snippets/" + snippet.id, {
       method: "DELETE",
     }).then(() => {
       history.push("/");

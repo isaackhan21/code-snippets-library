@@ -33,7 +33,7 @@ const AddSnippet = ({
 
     setIsLoading(true);
 
-    fetch("react-snippet.herokuapp.com/snippets", {
+    fetch("https://react-snippet.herokuapp.com/api/snippets", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(snippets),
