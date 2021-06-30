@@ -11,7 +11,7 @@ const Snippets = ({
   showSearch,
   deleteBtn,
   showMessage,
-  staticButtons,
+  
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [snippetCopy, setSnippetCopy] = useState([]);
@@ -36,7 +36,7 @@ const Snippets = ({
             handleBtnsFetch={handleBtnsFetch}
             snippets={snippets}
             deleteBtn={deleteBtn}
-            staticButtons={staticButtons}
+            
           />
         </div>
         <div className="snippets">

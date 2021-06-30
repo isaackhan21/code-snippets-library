@@ -19,7 +19,6 @@ const Base = ({
   handleBtns,
   deleteBtn,
   showAddSnippet,
-  staticButtons,
 }) => {
   return (
     <div className="base">
@@ -33,7 +32,6 @@ const Base = ({
             isLoading={isLoading}
             error={error}
             deleteBtn={deleteBtn}
-            staticButtons={staticButtons}
           />
         </Route>
         <Route exact path="/create">

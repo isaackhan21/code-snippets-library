@@ -5,7 +5,7 @@ import AddSnippet from "./components/AddSnippet";
 import Snippets from "./components/Snippets";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-import { buttonDatabase } from "./ButtonDatabase";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -25,7 +25,6 @@ function App() {
   // const [btns, setbtns] = useState(["All", "React"]);
   const [btns, setbtns] = useState(["React", "CSS", "Short Snippets"]);
   const [showAddSnippet, setShowAddSnippet] = useState(true);
-  const [staticButtons, setStaticButtons] = useState(buttonDatabase);
 
   const {
     data: snippets,
@@ -144,7 +143,6 @@ function App() {
             error={error}
             deleteBtn={deleteBtn}
             showAddSnippet={showAddSnippet}
-            staticButtons={staticButtons}
 
             // handleBtns={handleBtns}
           />

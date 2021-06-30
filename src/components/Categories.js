@@ -13,7 +13,6 @@ const Categories = ({
   snippetsCat,
   btns,
   deleteBtn,
-  staticButtons,
 }) => {
   const [snippetCopy, setSnippetCopy] = useState([]);
   // let newArr = snippetsCat.map((snippet) => snippet.category);

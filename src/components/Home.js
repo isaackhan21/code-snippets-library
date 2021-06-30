@@ -11,7 +11,6 @@ const Home = ({
   isLoading,
   error,
   deleteBtn,
-  staticButtons,
 }) => {
   const {
     data: snippetsFetch,
@@ -54,7 +53,6 @@ const Home = ({
           showSearch={showSearch}
           deleteBtn={deleteBtn}
           showMessage={showMessage}
-          staticButtons={staticButtons}
         />
       )}
     </div>
