@@ -18,7 +18,6 @@ const Base = ({
   error,
   handleBtns,
   deleteBtn,
-  deleteStaticButton,
   showAddSnippet,
   staticButtons,
 }) => {
@@ -35,7 +34,6 @@ const Base = ({
             error={error}
             deleteBtn={deleteBtn}
             staticButtons={staticButtons}
-            deleteStaticButton={deleteStaticButton}
           />
         </Route>
         <Route exact path="/create">

@@ -23,7 +23,7 @@ function App() {
   const [snippetCopy, setSnippetCopy] = useState([]);
   const [snipCat, setSnipCat] = useState([]);
   // const [btns, setbtns] = useState(["All", "React"]);
-  const [btns, setbtns] = useState([]);
+  const [btns, setbtns] = useState(["React", "CSS", "Short Snippets"]);
   const [showAddSnippet, setShowAddSnippet] = useState(true);
   const [staticButtons, setStaticButtons] = useState(buttonDatabase);
 
@@ -69,11 +69,11 @@ function App() {
     // localStorage.setItem("btns", JSON.stringify(btns));
   };
 
-  const deleteStaticButton = (id) => {
-    setStaticButtons((staticButtons) =>
-      staticButtons.filter((btn, index) => index !== id)
-    );
-  };
+  // const deleteStaticButton = (id) => {
+  //   setStaticButtons((staticButtons) =>
+  //     staticButtons.filter((btn, index) => index !== id)
+  //   );
+  // };
 
   const addSnippetButton = (e) => {
     e.preventDefault();
@@ -143,7 +143,6 @@ function App() {
             isLoading={isLoading}
             error={error}
             deleteBtn={deleteBtn}
-            deleteStaticButton={deleteStaticButton}
             showAddSnippet={showAddSnippet}
             staticButtons={staticButtons}
 

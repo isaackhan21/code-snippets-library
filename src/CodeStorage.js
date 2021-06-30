@@ -373,3 +373,31 @@ const SnippetDetail = ({ snippets, prism }) => {
 
 export default SnippetDetail;
 
+
+//Categories Static
+
+ {/* {staticButtons.map((button, index) => {
+          return (
+            <div className="category" key={index}>
+              <button
+                className="delete-cat"
+                onClick={() => deleteStaticButton(index)}
+              >
+                Delete
+              </button>
+              <button
+                className="cat-btn"
+                value={button}
+                // key={snippet.id}
+                onClick={(func) => {
+                  routeChange(func);
+                  handleBtnsFetch(func);
+                  console.log("Clicked!", button);
+                }}
+              >
+                {button}
+              </button>
+            </div>
+          );
+        })} */}
+

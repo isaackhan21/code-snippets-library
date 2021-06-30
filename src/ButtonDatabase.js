@@ -1,1 +1,1 @@
-export const buttonDatabase = ["Javascript", "CSS"];
+export const buttonDatabase = ["React", "CSS", "Short Snippets"];
