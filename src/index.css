@@ -20,7 +20,8 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 350px 1fr;
+  /* grid-template-columns: 350px 1fr; */
+  grid-template-columns: 24.3vw 1fr;
   grid-template-rows: 13vh 80vh 20vh;
   grid-template-areas:
     "header header"
@@ -32,7 +33,8 @@ body {
   background-color: gray;
   grid-area: header;
   /* height: 300px; */
-  height: 100px;
+  /* height: 100px; */
+  height: 13.5vh;
 }
 
 .sidebar {
@@ -119,7 +121,8 @@ body {
   display: flex;
   justify-content: center;
   margin: 1.5rem;
-  width: 200px;
+  /* width: 200px; */
+  width: 13.8vw;
   transition: transform 0.2s;
   font-family: "Montserrat", sans-serif;
 }
@@ -135,7 +138,8 @@ button:hover {
 .box {
   display: flex;
   flex-direction: row;
-  height: 600px;
+  /* height: 600px; */
+  height: 81.2vh;
 }
 
 .snippets-list {
@@ -165,7 +169,8 @@ button:hover {
   margin-top: 0.3rem;
   /* margin-bottom: 0.9rem; */
   overflow: scroll;
-  border-right: 1px solid black;
+  /* border-right: 1px solid black; */
+  border-right: 0.063rem solid black;
 }
 
 .search-snippet {
@@ -196,8 +201,10 @@ button:hover {
   padding-bottom: 1em;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  width: 250px;
-  height: 50px;
+  /* width: 250px; */
+  width: 17.4vw;
+  /* height: 50px; */
+  height: 6.7vh;
   border-radius: 0.2rem;
   margin: 1rem;
   transition: transform 0.2s;
@@ -226,8 +233,10 @@ button:hover {
 }
 
 .search-snippet {
-  width: 400px;
-  height: 40px;
+  /* width: 400px; */
+  width: 27.7vw;
+  /* height: 40px; */
+  height: 5.4vh;
   border-radius: 0.2rem;
   margin: 1rem;
   padding-left: 1rem;
@@ -238,7 +247,8 @@ button:hover {
 .snippet-items {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 150px;
+  /* grid-auto-rows: 150px; */
+  grid-auto-rows: 20.3vh;
   grid-gap: 4rem;
   width: 70vw;
   margin: 3.5rem;
@@ -363,8 +373,10 @@ button:hover {
 }
 
 .cat-input-btn {
-  height: 50px;
-  width: 100px;
+  /* height: 50px; */
+  height: 6.7vh;
+  /* width: 100px; */
+  width: 6.9vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -374,7 +386,8 @@ button:hover {
   cursor: pointer;
   background-color: blue;
   transition: transform(0.2s);
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  border-radius: 0.25rem;
   color: white;
 }
 
@@ -386,7 +399,8 @@ button:hover {
   margin-top: 2rem;
   background-color: whitesmoke;
   border-radius: 0.4rem;
-  width: 200px;
+  /* width: 200px; */
+  width: 13.9vw;
   text-align: center;
 }
 
@@ -402,7 +416,8 @@ button:hover {
   height: 10vh;
   /* width: 750px; */
   width: 40vw;
-  border-radius: 2px;
+  /* border-radius: 2px; */
+  border-radius: 0.125rem;
   outline: none;
   resize: none;
   background-color: whitesmoke;
@@ -415,7 +430,8 @@ button:hover {
   width: 40vw;
   border: none;
   padding: 1em;
-  border-radius: 2px;
+  /* border-radius: 2px; */
+  border-radius: 0.125rem;
   outline: none;
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
@@ -425,8 +441,10 @@ button:hover {
   border: none;
   /* width: 750px; */
   width: 60vw;
-  height: 300px;
-  border-radius: 4px;
+  /* height: 300px; */
+  height: 40.6vh;
+  /* border-radius: 4px; */
+  border-radius: 0.25rem;
   /* height: 100px; */
   outline: none;
   resize: none;
@@ -443,7 +461,8 @@ button:hover {
   justify-content: center;
   border: none;
   padding: 0.8em;
-  border-radius: 2px;
+  /* border-radius: 2px; */
+  border-radius: 0.125rem;
   outline: none;
   width: 40vw;
   font-family: "Montserrat", sans-serif;
@@ -452,14 +471,16 @@ button:hover {
 .create-cat {
   border: none;
   padding: 0.9em;
-  border-radius: 2px;
+  /* border-radius: 2px; */
+  border-radius: 0.125rem;
   outline: none;
   width: 40vw;
   font-family: "Montserrat", sans-serif;
 }
 
 .categories-add {
-  height: 100px;
+  /* height: 100px; */
+  height: 13.5vh;
   display: flex;
   justify-content: center;
   margin-top: 2rem;
@@ -489,8 +510,10 @@ button:hover {
   display: inline-block;
   /* flex-direction: row; */
   /* height: 200px; */
-  height: 100px;
-  width: 200px;
+  /* height: 100px; */
+  height: 13.5vh;
+  /* width: 200px; */
+  width: 13.9vw;
   margin-right: 4rem;
   /* align-items: center; */
 }
@@ -502,14 +525,16 @@ button:hover {
   margin-top: 4rem;
   background-color: #a8a8a8;
   padding: 2em;
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  border-radius: 0.25rem;
 }
 
 .top-elements {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
-  width: 800px;
+  /* width: 800px; */
+  width: 55.5vw;
   margin: 0 auto;
 }
 
@@ -517,10 +542,13 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 40px;
+  /* width: 200px; */
+  width: 13.9vw;
+  /* height: 40px; */
+  height: 5.4vh;
   background-color: blue;
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  border-radius: 0.25rem;
   transition: transform(0.2s);
 }
 
@@ -534,7 +562,8 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 800px;
+  /* height: 800px; */
+  height: 108.3vh;
   background-color: whitesmoke;
   border-radius: 1rem;
   padding: 1rem;
@@ -547,7 +576,8 @@ button:hover {
   width: 40vw;
   border: none;
   padding: 1em;
-  border-radius: 2px;
+  /* border-radius: 2px; */
+  border-radius: 0.125rem;
   outline: none;
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
@@ -558,7 +588,8 @@ button:hover {
   justify-content: space-between;
   /* flex-direction: column; */
   align-items: center;
-  height: 50px;
+  /* height: 50px; */
+  height: 6.8vh;
 }
 
 .top-inputs {
@@ -579,7 +610,8 @@ button:hover {
 .detail-body {
   background-color: whitesmoke;
   padding: 1rem;
-  border-radius: 2px;
+  /* border-radius: 2px; */
+  border-radius: 0.125rem;
   margin-bottom: 2rem;
 }
 
@@ -612,8 +644,10 @@ button:hover {
   align-items: center;
   margin: 2rem;
   background-color: #a8a8a8;
-  border-radius: 4px;
-  min-height: 50px;
+  /* border-radius: 4px; */
+  border-radius: 0.25rem;
+  /* min-height: 50px; */
+  min-height: 6.8vh;
   overflow-wrap: break-word;
   display: inline-block;
   /* height: fit-content; */
@@ -633,11 +667,14 @@ button:hover {
   align-items: center;
   background-color: #a8a8a8;
   padding: 1rem;
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  border-radius: 0.25rem;
   /* min-width: 200px;
   max-width: 400px; */
-  width: 500px;
-  height: 50px;
+  /* width: 500px; */
+  width: 34.7vw;
+  /* height: 50px; */
+  height: 6.8vh;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -645,7 +682,8 @@ button:hover {
 
 .snippet-title-div {
   /* background-color: gray; */
-  min-height: 20px;
+  /* min-height: 20px; */
+  min-height: 2.7vh;
   font-size: 1.5rem;
   color: black;
 }
@@ -661,8 +699,10 @@ button:hover {
   /* background-color: gray; */
   padding: 0.5rem;
   margin-top: 2rem;
-  width: 200px;
-  border-radius: 2px;
+  /* width: 200px; */
+  width: 13.9vw;
+  /* border-radius: 2px; */
+  border-radius: 0.125rem;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -683,11 +723,14 @@ button:hover {
   justify-content: center;
   align-items: center;
   background-color: #a8a8a8;
-  height: 50px;
-  width: 100px;
+  /* height: 50px; */
+  height: 6.8vh;
+  /* width: 100px; */
+  width: 6.9vw;
   cursor: pointer;
   text-align: center;
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  border-radius: 0.25rem;
   transition: transform(0.2s);
 }
 
@@ -733,7 +776,8 @@ button:hover {
 
   margin: 0 auto;
   height: 50vh;
-  width: 900px;
+  /* width: 900px; */
+  width: 62.5vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -751,7 +795,8 @@ button:hover {
   background-color: white;
   padding: 1em;
   color: black;
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  border-radius: 0.25rem;
   transition: transform(0.2s);
 }
 
@@ -769,7 +814,8 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
+  /* height: 150px; */
+  height: 20.3vh;
 }
 
 .error-page {
@@ -795,13 +841,15 @@ button:hover {
   margin-top: 1.5rem;
   transition: transform(0.2s);
   background-color: blue;
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  border-radius: 0.25rem;
 }
 
 .error-link-text {
   text-decoration: none;
   color: white;
-  width: 150px;
+  /* width: 150px; */
+  width: 10.4vw;
   display: flex;
   justify-content: center;
   text-align: center;

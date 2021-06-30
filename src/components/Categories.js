@@ -13,6 +13,8 @@ const Categories = ({
   snippetsCat,
   btns,
   deleteBtn,
+  staticButtons,
+  deleteStaticButton,
 }) => {
   const [snippetCopy, setSnippetCopy] = useState([]);
   // let newArr = snippetsCat.map((snippet) => snippet.category);
@@ -59,6 +61,57 @@ const Categories = ({
             All
           </button>
         </div>
+        {staticButtons.map((button, index) => {
+          return (
+            <div className="category" key={index}>
+              <button
+                className="delete-cat"
+                onClick={() => deleteStaticButton(index)}
+              >
+                Delete
+              </button>
+              <button
+                className="cat-btn"
+                value={button}
+                // key={snippet.id}
+                onClick={(func) => {
+                  routeChange(func);
+                  handleBtnsFetch(func);
+                  console.log("Clicked!", button);
+                }}
+              >
+                {button}
+              </button>
+            </div>
+          );
+        })}
+        {/* <div className="all">
+          <button
+            className="cat-btn"
+            value="Javascript"
+            onClick={(func) => {
+              routeChange(func);
+              handleBtnsFetch(func);
+            }}
+          >
+            Javascript
+          </button>
+        </div>
+        <div className="category">
+          <button className="delete-cat" onClick={() => deleteBtn()}>
+            Delete
+          </button>
+          <button
+            className="cat-btn"
+            value="CSS"
+            onClick={(func) => {
+              routeChange(func);
+              handleBtnsFetch(func);
+            }}
+          >
+            CSS
+          </button>
+        </div> */}
         {btns &&
           btns.map((btn, index) => {
             return (

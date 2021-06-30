@@ -5,7 +5,7 @@ import AddSnippet from "./components/AddSnippet";
 import Snippets from "./components/Snippets";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-import { snippetDatabase } from "./SnippetDatabase";
+import { buttonDatabase } from "./ButtonDatabase";
 import {
   BrowserRouter as Router,
   Route,
@@ -25,6 +25,7 @@ function App() {
   // const [btns, setbtns] = useState(["All", "React"]);
   const [btns, setbtns] = useState([]);
   const [showAddSnippet, setShowAddSnippet] = useState(true);
+  const [staticButtons, setStaticButtons] = useState(buttonDatabase);
 
   const {
     data: snippets,
@@ -63,8 +64,15 @@ function App() {
 
   const deleteBtn = (id) => {
     setbtns((btns) => btns.filter((btn, index) => index !== id));
+
     // setbtns(btns.splice(index, 1));
     // localStorage.setItem("btns", JSON.stringify(btns));
+  };
+
+  const deleteStaticButton = (id) => {
+    setStaticButtons((staticButtons) =>
+      staticButtons.filter((btn, index) => index !== id)
+    );
   };
 
   const addSnippetButton = (e) => {
@@ -135,7 +143,9 @@ function App() {
             isLoading={isLoading}
             error={error}
             deleteBtn={deleteBtn}
+            deleteStaticButton={deleteStaticButton}
             showAddSnippet={showAddSnippet}
+            staticButtons={staticButtons}
 
             // handleBtns={handleBtns}
           />
